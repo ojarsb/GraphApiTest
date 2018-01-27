@@ -7,10 +7,15 @@ namespace GraphApi.Core.Identity
 {
     public class IdentitiyHelper
     {
-        //private const string ClientId = "13b53fe0-4b6b-4675-8aaf-3b4d97d2d145"; //ojarob@inbox.lv
-        private const string ClientId = "1c189eb6-db13-4d3a-9393-04c577fb9e2c"; //ojarob@oobb.on
+        private const string ClientId = ""; //ojbi@uoncloud.com
         private static readonly PublicClientApplication IdentityClientApp = new PublicClientApplication(ClientId);
-        private static readonly string[] Scopes = { "User.Read", "DeviceManagementApps.Read.All", "DeviceManagementApps.ReadWrite.All" };
+        //private static readonly string[] Scopes = { "User.Read", "DeviceManagementApps.Read.All", "DeviceManagementApps.ReadWrite.All", "DeviceManagementConfiguration.ReadWrite.All" };
+        //private static readonly string[] Scopes = { "User.Read", "DeviceManagementConfiguration.Read.All" };
+        //private static readonly string[] Scopes = { "User.Read", "DeviceManagementManagedDevices.ReadWrite.All", "DeviceManagementConfiguration.ReadWrite.All" };
+
+        private static readonly string[] Scopes = { "User.Read", "Group.Read.All" };
+
+        //"DeviceManagementConfiguration.Read.All"
         public static DateTimeOffset Expiration;
         public static string TokenForUser;
 

@@ -54,7 +54,7 @@ namespace GraphApi.Core.Services
 
                 //requestBody =
                 //    "{\"@odata.type\":\"#microsoft.graph.windowsMobileMSI\",\"categories\":[],\"commandLine\":\"\",\"description\":\"asdfasdfasfd\",\"developer\":\"\",\"displayName\":\"Orca blablab\",\"fileName\":\"Orca.Msi\",\"identityVersion\":\"3.1.3790.0000\",\"informationUrl\":\"\",\"isFeatured\":false,\"notes\":\"\",\"owner\":\"\",\"privacyInformationUrl\":\"\",\"productCode\":\"{85F4CBCB-9BBC-4B50-A7D8-E1106771498D}\",\"publisher\":\"asdfasdfasdf\"}";
-                var content = new StringContent(requestBody, Encoding.UTF8, "application/json");
+                 var content = new StringContent(requestBody, Encoding.UTF8, "application/json");
                 
                 var response = await client.PostAsync(new Uri(requestUri), content);
 
